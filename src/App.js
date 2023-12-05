@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./components/Navbar";
+import Result from "./components/Result";
+import Calculator from "./components/Calculator";
+import { useState } from "react";
+import { Grid } from "@mui/material";
+import { Container } from "@mui/system";
+
 
 function App() {
+  const [data, setData] = useState({
+    compensation: '',
+    minutes: '',
+    mileage: '',
+    hourlyRate: ''
+  });
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Navbar />
+    <Container maxWidth="xl" sx={{marginTop:4}}>
+        <Grid container spacing={5} alignItems="center">
+          <Grid item xs={12} md={6}>
+            <Calculator data={data} setData={setData} />
+          </Grid>
+          <Grid item xs={12} md={6}>
+           
+          </Grid>
+        </Grid>
+      </Container>
+    
+
     </div>
   );
 }
