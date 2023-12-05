@@ -1,3 +1,11 @@
+This project is a work in progress. For the first version, the only variables are mileage, minutes, and compensation per order. 
+The goal for future versions is to add additional variables for calculation. I would like to add a field to input your vehicle's mile per gallon consumption, and another one
+for the current gas price in your area.
+In the future, I also want to take into account the location where the order will drop you off. For example, if the order has you ending up in a low traffic location, your overall
+hourly rate would be affected negatively even though you might have made more money just for the one order compared to another order that would have dropped you off in a higher traffic
+location, since you could have picked up another order more easily. 
+In addition to higher and lower traffic locations, I also have the goal of taking into account your home address, and seeing how far the current order will take you from your home address. This would be particularly relevant if you are on your last order of the night, since you would have to account for the fact that you still need to drive home after completing the order.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
